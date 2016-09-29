@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { PageOne } from './pageOne'
 import {connect} from 'react-redux'
 import { push } from 'react-router-redux'
-import * as actions from './actions'
+import { actions } from './reducer'
 
 const mstp = state => ({
+    txtColor: state.pageone.flag ? 'red' : 'green'
 })
 
 let mdtp = {
-    action1: actions.action1,
-    action2: actions.action2
+    toggle: actions.toggle
 }
 
 const component = connect(mstp,mdtp)(PageOne)

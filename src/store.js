@@ -19,13 +19,7 @@ const store = initialState => {
     if (global.reduxNativeDevTools) {
         global.reduxNativeDevTools.updateStore(store)
     }
-    if (module.hot) {
-        // Enable Webpack hot module replacement for reducers
-        module.hot.accept(() => {
-            const nextRootReducer = require('./reducers').default
-            store.replaceReducer(nextRootReducer)
-        })
-    }
+
     return store
 }
 

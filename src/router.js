@@ -27,18 +27,7 @@ const styles = StyleSheet.create({
   component: {
     backgroundColor: '#FFFFFF',
     flex: 1,
-  },
-  home: {
-    backgroundColor: '#FFFFFF',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-  detailCard: {
-    height: 100,
-    margin: 20,
-    width: 100,
-  },
+  }
 })
 
 const Master = (props) => (
@@ -46,22 +35,6 @@ const Master = (props) => (
     {props.children}
   </View>
 )
-
-const HomeHeader = withRouter((props) => {
-  const handleRightButtonPress = () => {
-    props.router.push('/detail/gray')
-  };
-
-  return (
-    <Header
-      {...props}
-      style={{ backgroundColor: '#26BBE5' }}
-      title="Feed"
-      rightButtonText="Gray"
-      onRightButtonPress={handleRightButtonPress}
-    />
-  )
-})
 
 export class Router extends Component {
     render() {
